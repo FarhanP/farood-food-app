@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import UserContext from "../utils/UserContext";
-import burgerlogo from "/assets/burger-logo.jpg";
-import cartIcon from "/assets/shopping-cart-1.jpg";
+import burgerlogo from "/assets/burger-logo.png";
+import cartIcon from "/assets/shopping-cart-1.png";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
