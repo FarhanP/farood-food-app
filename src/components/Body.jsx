@@ -1,4 +1,4 @@
-import  {RestaurantCard,   withRestaurantPromotedLabel } from "./RestaurantCard";
+import { RestaurantCard, withRestaurantPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -25,18 +25,19 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://farood-food-app.vercel.app/api/restaurants/list"
     );
     const response = await data.json();
-    const responseCard = window.innerWidth <= 768 ? response?.data?.cards[2] : response?.data?.cards[4]
+    const responseCard =
+      window.innerWidth <= 768
+        ? response?.data?.cards[2]
+        : response?.data?.cards[4];
     setResList(
-     responseCard?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
+      responseCard?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    
+
     setFilteredList(
-      responseCard?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
+      responseCard?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -68,12 +69,12 @@ const Body = () => {
                   .includes(searchText.toLowerCase())
               );
               // if(e.target.textContent === 'Search') {
-                setFilteredList(filteredRes);
-                // e.target.textContent = 'Clear';
+              setFilteredList(filteredRes);
+              // e.target.textContent = 'Clear';
               // } else {
-                // document.querySelector('.search-box').value = '';
-                // e.target.textContent = 'Search';
-                // setFilteredList(listofRestaurants);
+              // document.querySelector('.search-box').value = '';
+              // e.target.textContent = 'Search';
+              // setFilteredList(listofRestaurants);
               // }
             }}
           >
@@ -98,7 +99,11 @@ const Body = () => {
         {/* Restaurant Cards */}
         {filteredList &&
           filteredList.map((res) => (
-            <Link className="w-full sm:w-auto" key={res.info.id} to={`/restaurants/${res.info.id}`}>
+            <Link
+              className="w-full sm:w-auto"
+              key={res.info.id}
+              to={`/restaurants/${res.info.id}`}
+            >
               {res.info.avgRating >= 4.5 ? (
                 <RestaurantCardPromoted resData={res} />
               ) : (
