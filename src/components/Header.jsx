@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 import burgerlogo from "/assets/burger-logo.jpg";
 import cartIcon from "/assets/shopping-cart-1.jpg";
 import { useEffect, useState, useContext } from "react";
@@ -30,10 +30,17 @@ const Header = () => {
         </h2>
       </div>
 
-      <nav className={`fixed top-0 p-6 text-3xl sm:text-base sm:p-0 left-0 h-full items-center sm:flex-row font-semibold transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
+      <nav
+        className={`fixed top-0 p-6 text-3xl sm:text-base sm:p-0 left-0 h-full items-center sm:flex-row font-semibold transform ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }
        transition-transform duration-300 z-50 sm:translate-x-0 sm:relative sm:flex sm:flex-row sm:w-auto sm:h-auto
-      `}>
-        <ul onClick={()=> setIsMenuOpen(!isMenuOpen)}  className="flex flex-col sm:flex-row">
+      `}
+      >
+        <ul
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="flex flex-col sm:flex-row"
+        >
           <li className="sm:px-6 py-6 sm:py-2 px-4 hover:text-themePurple">
             <Link to="/">Home</Link>
           </li>
@@ -47,15 +54,20 @@ const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
         </ul>
-        <div onClick={()=> setIsMenuOpen(!isMenuOpen)} className="cart-wrapper flex items-center sm:m-0 px-4 py-2">
+        <div
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="cart-wrapper flex items-center sm:m-0 px-4 py-2"
+        >
           <Link to="/cart" className="relative">
             <div className="hidden sm:block">
-            <img className="w-6 h-6 mr-3" src={cartIcon} />
-            <p className="absolute top-[-10px] right-[2px] bg-themePurple text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-              {cartItems.length} 
-            </p>
+              <img className="w-6 h-6 mr-3" src={cartIcon} />
+              <p className="absolute top-[-10px] right-[2px] bg-themePurple text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                {cartItems.length}
+              </p>
             </div>
-            <p className="sm:hidden font-bold text-themePurple">Cart ({cartItems.length} items)</p>
+            <p className="sm:hidden font-bold text-themePurple">
+              Cart ({cartItems.length} items)
+            </p>
           </Link>
         </div>
         <button
@@ -66,16 +78,26 @@ const Header = () => {
         >
           {btnText}
         </button>
-        <p className="mx-4 my-4 sm:mx-3 sm:my-0 font-bold">{loggedInUser} (User)</p>
+        <p className="mx-4 my-4 sm:mx-3 sm:my-0 font-bold">
+          {loggedInUser} (User)
+        </p>
       </nav>
-      <button onClick={()=>setIsMenuOpen(!isMenuOpen)} className="ham-menu sm:hidden">
-        <img className="w-[35px] h-[35px]" src="https://img.icons8.com/ios-filled/50/800080/menu--v6.png" alt="Menu"/>
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="ham-menu sm:hidden"
+      >
+        <img
+          className="w-[35px] h-[35px]"
+          src="https://img.icons8.com/ios-filled/50/800080/menu--v6.png"
+          alt="Menu"
+        />
       </button>
-     {
-      isMenuOpen && (
-        <div onClick={()=>setIsMenuOpen(!isMenuOpen)} className="menu-background fixed top-0 left-0 opacity-95 w-full h-full bg-themePink z-40 sm:hidden"></div>
-      )
-     }
+      {isMenuOpen && (
+        <div
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="menu-background fixed top-0 left-0 opacity-95 w-full h-full bg-themePink z-40 sm:hidden"
+        ></div>
+      )}
     </div>
   );
 };
