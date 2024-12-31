@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import UserContext from "../utils/UserContext";
-import burgerlogo from "/assets/burger-logo.png";
-import cartIcon from "/assets/shopping-cart-1.png";
+import burgerlogo from "/assets/burger-logo.jpg";
+import cartIcon from "/assets/shopping-cart-1.jpg";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -88,7 +88,7 @@ const Header = () => {
       >
         <img
           className="w-[35px] h-[35px]"
-          src="https://img.icons8.com/ios-filled/50/800080/menu--v6.png"
+          src="https://img.icons8.com/ios-filled/50/800080/menu--v6.jpg"
           alt="Menu"
         />
       </button>
