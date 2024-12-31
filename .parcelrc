@@ -1,0 +1,13 @@
+{
+  "optimizers": {
+    "*.jpg": [
+      "@parcel/optimizer-image"
+    ],
+    "*.jpeg": [
+      "@parcel/optimizer-image"
+    ],
+    "*.png": [
+      "@parcel/optimizer-image"
+    ]
+  }
+}
