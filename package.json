@@ -11,7 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.12.0",
-    "@parcel/optimizer-image": "^2.13.3",
     "postcss": "^8.4.47",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.14"
