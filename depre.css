@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Quicksand', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.75rem;
+    /* background-color: #e39ff6; */
+    /* background-color: #dbb3da; */
+    background-color: #fadeffbd;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    mix-blend-mode: multiply;
+}
+
+.company-name {
+    margin-left: 20px;
+    color: #333;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items>ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-items>ul>li {
+    padding: 0 2.25rem;
+    font-weight: bold;
+}
+
+.cart-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-wrapper .cart {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.15;
+}
+
+
+.cart-wrapper .cart-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 1.5rem;
+}
+
+.filter-btn, .search-btn {
+    cursor: pointer;
+}
+
+.filter-btn {
+    /* cursor: pointer; */
+}
+
+.restaurant-container,
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.restaurant-card,
+.shimmer-cards {
+    width: 250px;
+    background-color: white;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    margin: 5px;
+}
+
+.restaurant-card:hover {
+    cursor: pointer;
+    border-color: #e8d7e8;
+    box-shadow: 0 4px 15px #eed1ed;
+}
+
+.restaurant-card h4 {
+    overflow-wrap: break-word;
+    line-clamp: 1;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.restaurant-logo {
+    width: 100%;
+    min-height: 245px;
+    height: auto;
+}
+
+
+.restaurant-logo>h3,
+h4 {
+    margin: 10px 0px;
+}
+
+
+/* Login button */
+.login-btn {
+    margin: 0 20px;
+    padding: 0.25rem 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid purple;
+    cursor: pointer;
+    transition: 100ms all ease-in-out;
+}   
+.login-btn:hover {
+    color: #fff;
+    background-color: #800080;
+}
+
+
+/* Shimmer UI style */
+.shimmer-container {
+    margin-top: 3rem;
+}
+
+.shimmer-cards {
+    width: 250px;
+    height: auto;
+    min-height: 245px;
+    background-color: #f0f0f0;
+}
