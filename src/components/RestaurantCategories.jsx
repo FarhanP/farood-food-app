@@ -13,10 +13,10 @@ const RestaurantCategories = ({ showItems, setShowIndex, data }) => {
           className="flex justify-between cursor-pointer"
           onClick={handleClick}
         >
-          <span className=" text-xl font-bold sm:text-base">
+          <span className=" text-lg font-bold sm:text-base">
             {data.title} ({data.itemCards.length})
           </span>
-          <span className="text-lg sm:text-base">⬇</span>
+          <span className="text-xl sm:text-base">⬇</span>
         </div>
         {/* {Accordion body} */}
         {showItems && <ItemsList items={data.itemCards} />}
