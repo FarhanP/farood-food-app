@@ -3,5 +3,3 @@ export const LOGO_URL =
 
 export const MENU_API =
   "https://farood-food-app.vercel.app/api/menu?restaurantId=";
-
-// latest deployment
