@@ -16,7 +16,7 @@ const useRestaurantMenu = (resId) => {
   }, []);
   const fetchMenu = async () => {
     const data = await fetch(
-      "https://farood-food-app.vercel.app/api/restaurantId=" + resId
+      "https://farood-food-app.vercel.app/api/menu/" + resId
     );
     const res = await data.json();
     setResMenu(res.data);
