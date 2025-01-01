@@ -15,7 +15,9 @@ const useRestaurantMenu = (resId) => {
     fetchMenu();
   }, []);
   const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
+    const data = await fetch(
+      "https://farood-food-app.vercel.app/api/menu" + resId
+    );
     const res = await data.json();
     setResMenu(res.data);
     // console.log(res.data);
