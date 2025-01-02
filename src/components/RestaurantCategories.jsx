@@ -2,8 +2,7 @@ import ItemsList from "./ItemsList";
 
 const RestaurantCategories = ({ showItems, setShowIndex, data }) => {
   const handleClick = () => {
-    console.log("click accordion");
-    setShowIndex();
+    setShowIndex(-1);
   };
 
   return (
