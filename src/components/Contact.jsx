@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="font-bold text-3xl sm:text-2xl my-8 sm:my-6">
         Contact Us
       </div>
-      <div classname="text-xl sm:text-2xl w-auto text-themePurple">
+      <div className="text-xl sm:text-2xl w-auto text-themePurple">
         <div className="email my-6 px-2">
           Email:<span className="font-bold px-2">pmdfarhan@gmail.com</span>
         </div>
