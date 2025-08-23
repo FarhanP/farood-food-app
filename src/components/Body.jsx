@@ -48,12 +48,12 @@ const Body = () => {
   return listofRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body m-3 p-3 sm:m-5 sm:p-5">
+    <div className="body m-3 p-3 sm:my-5 sm:mx-24 sm:p-5">
       <div className="filter mb-5 pb-5 flex flex-col sm:flex-row gap-2">
         <div className="search flex gap-8 sm:gap-4">
           <input
             type="text"
-            className="search-box w-full px-3 py-1 outline-none border rounded border-themePurple"
+            className="search-box w-full sm:min-w-[200px] px-3 py-1 outline-none border rounded border-themePurple"
             placeholder="Search for a restaurant"
             value={searchText}
             onChange={(e) => {
@@ -95,7 +95,7 @@ const Body = () => {
           Top Rated
         </button>
       </div>
-      <div className="restaurant-container flex flex-col sm:flex-row justify-center sm:justify-normal items-center align-middle sm:flex-wrap gap-6 sm:gap-3">
+      <div className="restaurant-container flex flex-col sm:flex-row justify-start items-center align-middle sm:flex-wrap gap-6 sm:gap-5">
         {/* Restaurant Cards */}
         {filteredList &&
           filteredList.map((res) => (
