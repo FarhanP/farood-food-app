@@ -12,9 +12,9 @@ export const RestaurantCard = (props) => {
 
   return (
     <div
-      className="restaurant-card border rounded shadow-md transition-all duration-400 ease-in-out
+      className="restaurant-card border rounded shadow-md transition-all duration-400 ease-in-out 
       hover:border-[#e8d7e8] hover:shadow-lg hover:shadow-shadowPink
-      bg-white p-4 sm:p-2 min-w-full max-w-full sm:max-w-[320px] sm:min-w-[350px] sm:min-h-[432px] h-auto"
+      bg-white p-4 sm:p-2 min-w-full max-w-full sm:max-w-[320px] sm:min-w-[320px] sm:min-h-[432px] h-auto"
     >
       <img
         className="restaurant-logo rounded-lg w-full min-h-[270px] max-h-[270px] h-auto object-cover"
