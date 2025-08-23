@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import UserContext from "../utils/UserContext";
-import burgerlogo from "/assets/burger-logo.png";
-import cartIcon from "/assets/shopping-cart-1.png";
+import burgerlogo from "../../assets/burger-logo.png";
+import cartIcon from "../../assets/shopping-cart-1.png";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,6 +16,7 @@ const Header = () => {
   const { loggedInUser } = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
+  console.log("Header is rendered", cartIcon);
 
   return (
     <div className="header flex justify-between shadow-md items-center px-5 sm:px-8 bg-themePink h-auto relative">

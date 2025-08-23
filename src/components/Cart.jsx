@@ -39,7 +39,6 @@ const Cart = () => {
           </h1>
           <img
             className="min-w-[350px] min-h-[350px] max-w-[350px] max-h-[350px] sm:min-w-[700px] sm:max-w-[700px] sm:min-h-[650px] sm:max-h-[650px]"
-            loading="lazy"
             src={cartEmpty}
             alt="Empty Cart"
           />
