@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import topRated from "../../assets/top-rated.svg";
+import topRated from "../assets/top-rated.svg";
 
 const Body = () => {
   // Local State Variable - useState()

@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
 import UserContext from "../utils/UserContext";
-import burgerlogo from "../../assets/burger-logo.png";
-import cartIcon from "../../assets/shopping-cart-1.png";
+import burgerlogo from "../assets/burgerlogo.png";
+import cartIcon from "../assets/shopping-cart-1.png";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log("cartIcon", cartIcon); // Should log a string URL
 
   useEffect(() => {
     console.log("useEffect is called in header");
