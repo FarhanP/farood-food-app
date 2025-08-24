@@ -20,7 +20,7 @@ const Header = () => {
   console.log(cartItems);
 
   return (
-    <div className="header flex justify-between items-center px-5 sm:px-8 bg-themePink h-auto relative">
+    <div className="header flex justify-between shadow-md items-center px-5 sm:px-8 bg-themePink h-auto relative">
       <div className="logo-section flex items-center">
         <img
           className="w-[60px] h-[60px]  sm:w-[75px] sm:h-[75px] mix-blend-multiply mr-3"
