@@ -1,7 +1,7 @@
 {
   "name": "namaste-react-ep-1",
   "version": "1.0.0",
-  "description": "This is the first episode of namaste-react",
+  "description": "Farood food ordering app",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
