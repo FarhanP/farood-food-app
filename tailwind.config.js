@@ -1,14 +1,21 @@
 /** @type {import('tailwindcss').Config} **/
 module.exports = {
-  content: [
-    "./src/**/*.{html,js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        themePurple: '#800080', // Your base purple
-        themePink: '#fde6f3',   // Example pink (you can customize this)
-        shadowPink: '#eed1ed'
+        themePurple: "#800080", // Your base purple
+        themePink: "#fde6f3", // Example pink (you can customize this)
+        shadowPink: "#eed1ed",
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeInUp: "fadeInUp 0.8s ease-out",
       },
     },
   },
@@ -22,5 +29,4 @@ module.exports = {
       pattern: /line-clamp/,
     },
   ],
-}
-
+};

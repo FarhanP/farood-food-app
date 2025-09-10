@@ -18,13 +18,15 @@ const Header = () => {
   console.log(cartItems);
 
   return (
-    <div className="header flex justify-between shadow-md items-center px-5 sm:px-28 bg-themePink h-auto relative">
+    <div className="header flex justify-between shadow-md items-center px-5 sm:px-26 bg-themePink h-auto relative">
       <div className="logo-section flex items-center">
-        <img
-          className="w-[60px] h-[60px]  sm:w-[75px] sm:h-[75px] mix-blend-multiply mr-3"
-          src={burgerlogo}
-          alt="Food logo"
-        />
+        <Link to="/">
+          <img
+            className="w-[60px] h-[60px]  sm:w-[75px] sm:h-[75px] mix-blend-multiply mr-3"
+            src={burgerlogo}
+            alt="Food logo"
+          />
+        </Link>
         <h2 className="company-name font-bold text-3xl tracking-wider">
           <Link to="/">Farood</Link>
         </h2>

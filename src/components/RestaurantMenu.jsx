@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
     );
 
   return (
-    <div className="menu m-3 p-3 text-center">
+    <div className="menu m-3 p-3 text-center animate-fadeInUp">
       <h1 className="font-bold text-3xl sm:text-2xl my-8 sm:my-6">{name}</h1>
       <p className=" text-xl text-bold sm:text-lg">
         {cuisines.join(", ")} - {costForTwo / 100}
