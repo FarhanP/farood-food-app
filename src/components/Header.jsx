@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
 import UserContext from "../utils/UserContext";
-import burgerlogo from "../assets/burgerlogo.png";
-import cartIcon from "../assets/shopping-cart-1.png";
+import burgerlogo from "url:../../public/assets/burger-logo.png";
+import cartIcon from "url:../../public/assets/shopping-cart-1.png";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log(burgerlogo); // Should log a string URL
 
   console.log("cartIcon", cartIcon); // Should log a string URL
 
@@ -20,7 +22,7 @@ const Header = () => {
   console.log(cartItems);
 
   return (
-    <div className="header flex justify-between shadow-md items-center px-5 sm:px-8 bg-themePink h-auto relative">
+    <div className="header flex justify-between shadow-md items-center px-5 sm:px-12 bg-themePink h-auto relative">
       <div className="logo-section flex items-center">
         <img
           className="w-[60px] h-[60px]  sm:w-[75px] sm:h-[75px] mix-blend-multiply mr-3"
@@ -47,14 +49,14 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="sm:px-6 py-6 px-4 sm:py-2 hover:text-themePurple">
-            <Link to="/about">About us</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="sm:px-6 py-6 px-4 sm:py-2 hover:text-themePurple">
-            <Link to="/contact">Contact us</Link>
+            <Link to="/contact">Contact</Link>
           </li>
-          <li className="sm:px-6 py-6 px-4  sm:py-2 hover:text-themePurple">
+          {/* <li className="sm:px-6 py-6 px-4  sm:py-2 hover:text-themePurple">
             <Link to="/grocery">Grocery</Link>
-          </li>
+          </li> */}
         </ul>
         <div
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -80,9 +82,9 @@ const Header = () => {
         >
           {btnText}
         </button>
-        <p className="mx-4 my-4 sm:mx-3 sm:my-0 font-bold">
+        {/* <p className="mx-4 my-4 sm:mx-3 sm:my-0 font-bold">
           {loggedInUser} (User)
-        </p>
+        </p> */}
       </nav>
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}

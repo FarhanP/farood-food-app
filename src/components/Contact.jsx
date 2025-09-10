@@ -42,7 +42,7 @@ const Contact = () => {
         </a>
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="https://x.com/mfarhancodes"
+          href="https://x.com/zekecodes"
           target="_tab"
           role="button"
         >

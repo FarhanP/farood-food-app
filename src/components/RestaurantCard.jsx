@@ -1,4 +1,10 @@
 import { LOGO_URL } from "../utils/constansts";
+import {
+  faClockFour,
+  faStar,
+  faMoneyBill,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const RestaurantCard = (props) => {
   const {
@@ -12,9 +18,9 @@ export const RestaurantCard = (props) => {
 
   return (
     <div
-      className="restaurant-card border rounded shadow-md transition-all duration-400 ease-in-out 
+      className="restaurant-card flex flex-col gap-2 border rounded shadow-md transition-all duration-400 ease-in-out 
       hover:border-[#e8d7e8] hover:shadow-lg hover:shadow-shadowPink
-      bg-white p-4 sm:p-2 min-w-full max-w-full sm:max-w-[320px] sm:min-w-[320px] sm:min-h-[432px] h-auto"
+      bg-white p-4 sm:p-6 min-w-full max-w-full sm:max-w-[350px] sm:min-w-[350px] sm:min-h-[432px] h-auto"
     >
       <img
         className="restaurant-logo rounded-lg w-full min-h-[270px] max-h-[270px] h-auto object-cover"
@@ -27,9 +33,22 @@ export const RestaurantCard = (props) => {
       <h4 className="line-clamp-1 text-lg sm:text-base break-words overflow-hidden">
         {cuisines.join(", ")}
       </h4>
-      <h4 className="font-bold text-lg sm:text-base">{avgRating} Ratings</h4>
-      <h4 className="font-extrabold text-xl sm:text-base">{costForTwo}</h4>
-      <h4>{slaString}</h4>
+      <h4 className="text-lg sm:text-base">
+        <FontAwesomeIcon className="pr-2" color="#800080" icon={faStar} />
+        {avgRating}
+        Ratings
+      </h4>
+      <h4 className="font-extrabold text-xl sm:text-base">
+        <FontAwesomeIcon className="pr-2" color="#800080" icon={faMoneyBill} />
+        {costForTwo}
+      </h4>
+      <h4>
+        <FontAwesomeIcon className="pr-2" color="#800080" icon={faClockFour} />
+        {slaString}
+      </h4>
+      <button className="search-btn mt-2 text-lg sm:text-base border outline-none hover:bg-white hover:text-themePurple border-themePurple px-3 py-1 bg-themePurple text-white font-bold rounded">
+        View Details
+      </button>
     </div>
   );
 };
