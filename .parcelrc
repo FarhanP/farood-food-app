@@ -1,14 +1,10 @@
 {
   "extends": "@parcel/config-default",
   "optimizers": {
-    "*.jpg": [
-      "@parcel/optimizer-image"
-    ],
-    "*.jpeg": [
-      "@parcel/optimizer-image"
-    ],
-    "*.png": [
-      "@parcel/optimizer-image"
-    ]
+    "*.png": [],
+    "*.jpg": [],
+    "*.jpeg": [],
+    "*.gif": [],
+    "*.svg": []
   }
 }
