@@ -34,16 +34,30 @@ export const RestaurantCard = (props) => {
         {cuisines.join(", ")}
       </h4>
       <h4 className="text-lg sm:text-base">
-        <FontAwesomeIcon className="pr-2" color="#800080" icon={faStar} />
-        {avgRating}
-        Ratings
+        <FontAwesomeIcon
+          className="pr-2"
+          size="medium"
+          color="#800080"
+          icon={faStar}
+        />
+        {avgRating} Ratings
       </h4>
       <h4 className="font-extrabold text-xl sm:text-base">
-        <FontAwesomeIcon className="pr-2" color="#800080" icon={faMoneyBill} />
+        <FontAwesomeIcon
+          className="pr-2"
+          size="medium"
+          color="#800080"
+          icon={faMoneyBill}
+        />
         {costForTwo}
       </h4>
-      <h4>
-        <FontAwesomeIcon className="pr-2" color="#800080" icon={faClockFour} />
+      <h4 className="text-xl sm:text-base">
+        <FontAwesomeIcon
+          className="pr-2"
+          size="medium"
+          color="#800080"
+          icon={faClockFour}
+        />
         {slaString}
       </h4>
       <button className="search-btn mt-2 text-lg sm:text-base border outline-none hover:bg-white hover:text-themePurple border-themePurple px-3 py-1 bg-themePurple text-white font-bold rounded">
