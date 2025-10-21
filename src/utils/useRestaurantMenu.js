@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MENU_API } from "../utils/constansts";
+import menu from "../../data/menu.json";
 
 const useRestaurantMenu = (resId) => {
   const [resMenu, setResMenu] = useState(null);
@@ -18,7 +19,7 @@ const useRestaurantMenu = (resId) => {
     const data = await fetch(
       "https://farood-food-app.vercel.app/api/menu/" + resId
     );
-    const res = await data.json();
+    const res = menu;
     setResMenu(res.data);
     // console.log(res.data);
   };
