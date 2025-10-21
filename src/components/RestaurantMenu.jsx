@@ -14,8 +14,8 @@ const RestaurantMenu = () => {
   const { name, cuisines, costForTwo, avgRating } =
     resMenu?.cards[2]?.card?.card?.info;
 
-  const responseCard =
-    window.innerWidth <= 768 ? resMenu?.cards[5] : resMenu?.cards[4];
+  const responseCard = resMenu?.cards[4];
+  // window.innerWidth <= 768 ? resMenu?.cards[5] : resMenu?.cards[4];
 
   const { itemCards } =
     responseCard?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card.card;
