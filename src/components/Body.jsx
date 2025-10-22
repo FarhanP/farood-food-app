@@ -50,7 +50,7 @@ const Body = () => {
   ) : (
     <div className="body m-3 p-3 sm:my-5 sm:mx-24 sm:p-5">
       <div className="filter mb-5 pb-5 flex flex-col sm:flex-row gap-2">
-        <div className="search flex gap-8 sm:gap-4">
+        <div className="search flex gap-4 sm:gap-4">
           <input
             type="text"
             className="search-box w-full sm:min-w-[200px] px-3 py-1 outline-none border rounded border-themePurple"

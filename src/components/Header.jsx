@@ -33,23 +33,29 @@ const Header = () => {
       </div>
 
       <nav
-        className={`fixed top-0 p-6 text-3xl sm:text-base sm:p-0 left-0 h-full items-center sm:flex-row font-semibold transform ${
+        className={`fixed top-0 px-2 py-6 text-3xl sm:text-base sm:p-0 left-0 w-full h-full items-center sm:flex-row font-semibold transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }
        transition-transform duration-300 z-50 sm:translate-x-0 sm:relative sm:flex sm:flex-row sm:w-auto sm:h-auto
       `}
       >
+        <span
+          onClick={() => setIsMenuOpen(false)}
+          className="sm:hidden text-themePurple flex justify-end px-5"
+        >
+          &#x2715;
+        </span>
         <ul
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex flex-col sm:flex-row"
         >
-          <li className="sm:px-6 py-6 sm:py-2 px-4 hover:text-themePurple">
+          <li className="sm:px-6 py-6 border-b border-themePurple sm:border-none  sm:py-2 px-4 hover:text-themePurple">
             <Link to="/">Home</Link>
           </li>
-          <li className="sm:px-6 py-6 px-4 sm:py-2 hover:text-themePurple">
+          <li className="sm:px-6 py-6 px-4 border-b border-themePurple sm:border-none sm:py-2 hover:text-themePurple">
             <Link to="/about">About</Link>
           </li>
-          <li className="sm:px-6 py-6 px-4 sm:py-2 hover:text-themePurple">
+          <li className="sm:px-6 py-6 px-4 border-b border-themePurple sm:border-none  sm:py-2 hover:text-themePurple">
             <Link to="/contact">Contact</Link>
           </li>
           {/* <li className="sm:px-6 py-6 px-4  sm:py-2 hover:text-themePurple">
@@ -58,7 +64,7 @@ const Header = () => {
         </ul>
         <div
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="cart-wrapper flex items-center sm:m-0 px-4 py-2"
+          className="cart-wrapper flex items-center border-b border-themePurple sm:border-none py-6 px-4 sm:m-0 sm:px-4 sm:py-2"
         >
           <Link to="/cart" className="relative">
             <div className="hidden sm:block">
