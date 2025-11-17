@@ -7,7 +7,7 @@
     "build": "parcel build index.html",
     "test": "jest"
   },
-  "author": "Mohamed Farhan",
+  "author": "Mohamed fox-byte",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.15.4",

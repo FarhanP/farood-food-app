@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="text-xl sm:text-2xl flex sm:w-6/12 sm:m-auto  flex-col text-themePurple">
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="mailto:pmdfarhan@example.com"
+          href="mailto:pmdfox-byte@example.com"
           target="_tab"
           role="button"
         >
@@ -24,7 +24,7 @@ const Contact = () => {
         </a>
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="https://github.com/FarhanP"
+          href="https://github.com/fox-byteP"
           target="_tab"
           role="button"
         >
@@ -33,7 +33,7 @@ const Contact = () => {
         </a>
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="https://www.linkedin.com/in/farhanp/"
+          href="https://www.linkedin.com/in/fox-bytep/"
           target="_tab"
           role="button"
         >
