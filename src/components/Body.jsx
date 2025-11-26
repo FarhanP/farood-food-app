@@ -1,5 +1,5 @@
 import { RestaurantCard, withRestaurantPromotedLabel } from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -10,6 +10,7 @@ const Body = () => {
   const [listofRestaurants, setResList] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredList, setFilteredList] = useState([]);
+  const inputRef = useRef(null);
   // Custom online status check hook
   const onlineStatus = useOnlineStatus();
 
@@ -23,6 +24,24 @@ const Body = () => {
 
   console.log("Component is rendered!");
 
+  // filter restaurants
+  const handleFilter = (value) => {
+    const query = typeof value === "string" ? value : searchText;
+    if (query === "") {
+      inputRef.current.focus();
+    }
+    const filteredRes = listofRestaurants.filter((res) =>
+      res?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
+    );
+    // if(e.target.textContent === 'Search') {
+    setFilteredList(filteredRes);
+    // e.target.textContent = 'Clear';
+    // } else {
+    // document.querySelector('.search-box').value = '';
+    // e.target.textContent = 'Search';
+    // setFilteredList(listofRestaurants);
+    // }
+  };
   const fetchData = async () => {
     const data = await fetch(
       "https://farood-food-app.vercel.app/api/restaurants/list"
@@ -45,38 +64,32 @@ const Body = () => {
     return <h1>Sorry, you are offline at the moment!</h1>;
   }
 
-  return listofRestaurants?.length === 0 ? (
+  return listofRestaurants?.length == 0 ? (
     <Shimmer />
   ) : (
-    <div className="body m-3 p-3 sm:my-5 sm:mx-24 sm:p-5">
+    <div className="body min-h-svh sm:max-w-[1320px] sm:flex sm:flex-col sm:items-center sm:mx-auto m-3 p-3 sm:my-10  sm:p-0">
       <div className="filter mb-5 pb-5 flex flex-col sm:flex-row gap-2">
         <div className="search flex gap-4 sm:gap-4">
           <input
             type="text"
-            className="search-box w-full sm:min-w-[200px] px-3 py-1 outline-none border rounded border-themePurple"
+            ref={inputRef}
+            className="search-box w-full sm:min-w-[450px] px-3 py-1 outline-none border rounded border-themePurple"
             placeholder="Search for a restaurant"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
+            onKeyDown={(e) => {
+              console.log(e.target.value);
+              if (e.key === "Enter") {
+                handleFilter(e.target.value);
+              }
+            }}
           />
           <button
+            role="button"
             className="search-btn text-lg sm:text-base border outline-none hover:bg-white hover:text-themePurple border-themePurple px-3 py-1 bg-themePurple text-white font-bold rounded"
-            onClick={(e) => {
-              const filteredRes = listofRestaurants.filter((res) =>
-                res?.info?.name
-                  ?.toLowerCase()
-                  .includes(searchText.toLowerCase())
-              );
-              // if(e.target.textContent === 'Search') {
-              setFilteredList(filteredRes);
-              // e.target.textContent = 'Clear';
-              // } else {
-              // document.querySelector('.search-box').value = '';
-              // e.target.textContent = 'Search';
-              // setFilteredList(listofRestaurants);
-              // }
-            }}
+            onClick={(e) => handleFilter(e)}
           >
             Search
           </button>
@@ -97,7 +110,7 @@ const Body = () => {
       </div>
       <div className="restaurant-container flex flex-col sm:flex-row justify-start items-center align-middle sm:flex-wrap gap-6 sm:gap-5">
         {/* Restaurant Cards */}
-        {filteredList &&
+        {filteredList && filteredList.length > 0 ? (
           filteredList.map((res) => (
             <Link
               className="w-full sm:w-auto"
@@ -110,7 +123,12 @@ const Body = () => {
                 <RestaurantCard resData={res} />
               )}
             </Link>
-          ))}
+          ))
+        ) : (
+          <h1 className="text-themePurple font-bold text-xl sm:text-2xl">
+            No restaurants match your filter!
+          </h1>
+        )}
       </div>
     </div>
   );

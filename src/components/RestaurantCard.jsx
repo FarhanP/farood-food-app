@@ -20,14 +20,15 @@ export const RestaurantCard = (props) => {
     <div
       className="restaurant-card flex flex-col gap-2 border rounded shadow-md transition-all duration-500 ease-in-out 
       hover:border-[#e8d7e8] hover:shadow-lg hover:shadow-shadowPink
-      bg-white p-4 sm:p-6 min-w-full max-w-full sm:max-w-[350px] sm:min-w-[350px] sm:min-h-[432px] h-auto animate-fadeInUp"
+      bg-white p-4 sm:p-6 min-w-full max-w-full sm:max-w-[315px] sm:min-w-[315px] sm:min-h-[432px] h-auto animate-fadeInUp"
     >
       <img
         className="restaurant-logo rounded-lg w-full min-h-[270px] max-h-[270px] h-auto object-cover"
         alt="Briyani Food"
         src={LOGO_URL + cloudinaryImageId}
       />
-      <h3 className="pt-4 font-bold text-2xl sm:text-lg line-clamp-1 break-words overflow-hidden">
+      <hr className="h-[1px] mt-1 bg-neutral-quaternary border-2 border-themePurple" />
+      <h3 className=" pt-4 font-bold text-2xl sm:text-lg line-clamp-1 break-words overflow-hidden">
         {name}
       </h3>
       <h4 className="line-clamp-1 text-lg sm:text-base break-words overflow-hidden">
