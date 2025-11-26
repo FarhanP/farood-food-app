@@ -11,6 +11,7 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 // import Grocery from "./components/Grocery";
 
 const Grocery = lazy(() => import("./components/Grocery"));
@@ -21,14 +22,10 @@ const App = () => {
       <UserContext.Provider value={{ loggedInUser: "fox-byte" }}>
         <div className="app">
           <Header />
-          <Outlet />
-          <div className="footer bg-themePink text-center p-4 mt-10 font-semibold">
-            <h3>
-              © {new Date().getFullYear()} Farood Pvt Ltd. All rights reserved.
-              Made with <span className="text-themePurple">&hearts;</span> by{" "}
-              <span className="text-themePurple">Fox</span>
-            </h3>
+          <div className="min-h-svh">
+            <Outlet />
           </div>
+          <Footer />
         </div>
       </UserContext.Provider>
     </Provider>

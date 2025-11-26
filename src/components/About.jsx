@@ -20,9 +20,9 @@ class About extends React.Component {
         <h1>About</h1>
         {/* <User name={'Mohamed F'} location={'Bengaluru'} email={'fox-bytecodes@gmail.com'}/> */}
         <UserClass
-          name={"Mohamed fox-byte"}
+          name={"fox-byte"}
           location={"Bengaluru"}
-          email={"pmdfox-byte@gmail.com"}
+          email={"crackedfoxbyte@gmail.com"}
         />
       </div>
     );
@@ -35,7 +35,7 @@ class About extends React.Component {
 //         <div>
 //             <h1>About</h1>
 //             {/* <User name={'Mohamed F'} location={'Bengaluru'} email={'fox-bytecodes@gmail.com'}/> */}
-//             <UserClass name={'Mohamed fox-byte'} location={'Bengaluru'} email={'pmdfox-byte@gmail.com'}/>
+//             <UserClass name={'fox-byte'} location={'Bengaluru'} email={'fox-byte@gmail.com'}/>
 //         </div>
 //      );
 // }

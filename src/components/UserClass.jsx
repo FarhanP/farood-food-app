@@ -15,7 +15,7 @@ class UserClass extends React.Component {
 
   async componentDidMount() {
     console.log("Child Component DidMount");
-    const data = await fetch("https://api.github.com/users/fox-bytep");
+    const data = await fetch("https://api.github.com/users/crackedfox");
     const response = await data.json();
     console.log(response);
     this.setState({ userInfo: response });
@@ -38,7 +38,7 @@ class UserClass extends React.Component {
         <h3 className="user-location">{location}</h3>
         <h4 className="user-contact italic">{email}</h4>
         <img
-          className="border-themePurple border mx-auto my-5 min-w-[300px] min-h-[300px] max-w-[300px] max-h-[300px]"
+          className="border-themePurple rounded-full border mx-auto my-5 min-w-[300px] min-h-[300px] max-w-[300px] max-h-[300px]"
           src={avatar_url}
           alt="Github Profile"
         />

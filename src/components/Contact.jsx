@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="text-xl sm:text-2xl flex sm:w-6/12 sm:m-auto  flex-col text-themePurple">
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="mailto:pmdfox-byte@example.com"
+          href="mailto:crackedfoxbyte@gmail.com"
           target="_tab"
           role="button"
         >
@@ -24,7 +24,7 @@ const Contact = () => {
         </a>
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="https://github.com/fox-byteP"
+          href="https://github.com/crackedfox"
           target="_tab"
           role="button"
         >
@@ -33,16 +33,7 @@ const Contact = () => {
         </a>
         <a
           className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="https://www.linkedin.com/in/fox-bytep/"
-          target="_tab"
-          role="button"
-        >
-          LinkedIn
-          <FontAwesomeIcon className="px-2" icon={faLinkedin} />
-        </a>
-        <a
-          className="font-bold my-6 px-5 py-2 rounded bg-themePurple text-white"
-          href="https://x.com/zekecodes"
+          href="https://x.com/crackedfoxbyte"
           target="_tab"
           role="button"
         >
