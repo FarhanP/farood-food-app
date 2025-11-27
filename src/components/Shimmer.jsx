@@ -1,5 +1,5 @@
 const Shimmer = () => {
-  const shimmerCount = 6;
+  const shimmerCount = 8;
   return (
     <div className="shimmer-container min-h-svh body sm:max-w-[1320px] sm:flex sm:flex-row sm:items-center sm:mx-auto m-3 p-3 sm:my-10  sm:p-0">
       <div className="restaurant-container flex flex-col sm:flex-row justify-start items-center align-middle sm:flex-wrap gap-6 sm:gap-5">
