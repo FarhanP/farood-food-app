@@ -19,7 +19,7 @@ const Grocery = lazy(() => import("./components/Grocery"));
 const App = () => {
   return (
     <Provider store={appStore}>
-      <UserContext.Provider value={{ loggedInUser: "fox-byte" }}>
+      <UserContext.Provider value={{ loggedInUser: "farhan" }}>
         <div className="app">
           <Header />
           <div className="min-h-svh">

@@ -18,26 +18,14 @@ class About extends React.Component {
     return (
       <div className="text-center font-semibold text-3xl sm:text-2xl mt-8">
         <h1>About</h1>
-        {/* <User name={'Mohamed F'} location={'Bengaluru'} email={'fox-bytecodes@gmail.com'}/> */}
         <UserClass
-          name={"fox-byte"}
+          name={"Mohamed Farhan"}
           location={"Bengaluru"}
-          email={"crackedfoxbyte@gmail.com"}
+          email={"pmdfarhan@gmail.com"}
         />
       </div>
     );
   }
 }
-
-// functional based component
-// const About = () => {
-//     return (
-//         <div>
-//             <h1>About</h1>
-//             {/* <User name={'Mohamed F'} location={'Bengaluru'} email={'fox-bytecodes@gmail.com'}/> */}
-//             <UserClass name={'fox-byte'} location={'Bengaluru'} email={'fox-byte@gmail.com'}/>
-//         </div>
-//      );
-// }
 
 export default About;
